@@ -4,7 +4,7 @@
   "action" : {
     "type": "redirect",
     "redirect": {
-      "extensionPath": "/OIG3.png"
+      "extensionPath": "/images/OIG3.png"
     }
   },
   "condition": {

@@ -5,7 +5,7 @@
   "description": "非公式英語学習のMOD",
   "web_accessible_resources": [
     {
-      "resources": [ "OIG3.png" ],
+      "resources": [ "images/OIG3.png" ],
       "matches": [ "https://*.alcnanext.jp/*" ]
     }
   ],
@@ -13,7 +13,7 @@
     "rule_resources" : [{
       "id": "oji_killer",
       "enabled": true,
-      "path": "oji-killer.json"
+      "path": "rules/oji-killer.json"
     }]
   },
   "permissions": [
@@ -24,6 +24,6 @@
     "https://*.alcnanext.jp/*"
   ],
   "icons": {
-    "128": "OIG3.png"
+    "128": "images/OIG3.png"
   }
 }
