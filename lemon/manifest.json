@@ -2,7 +2,13 @@
   "manifest_version": 3,
   "name": "lemon",
   "version": "1.1",
-  "description": "非公式英語学習のMOD",
+  "description": "非公式英語学習の MOD",
+  "content_scripts": [
+    {
+      "matches": ["https://*.alcnanext.jp/*"],
+      "js": ["script.js"]
+    }
+  ],
   "web_accessible_resources": [
     {
       "resources": [ "images/OIG3.png" ],
