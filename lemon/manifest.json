@@ -11,16 +11,28 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [ "images/OIG3.png" ],
-      "matches": [ "https://*.alcnanext.jp/*" ]
+      "resources": [
+        "images/OIG3.png",
+        "images/nan-contents-direction.png"
+      ],
+      "matches": [
+        "https://*.alcnanext.jp/*"
+      ]
     }
   ],
-  "declarative_net_request" : {
-    "rule_resources" : [{
-      "id": "oji_killer",
-      "enabled": true,
-      "path": "rules/oji-killer.json"
-    }]
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "oji_killer",
+        "enabled": true,
+        "path": "rules/oji-killer.json"
+      },
+      {
+        "id": "dog_killer",
+        "enabled": true,
+        "path": "rules/dog-killer.json"
+      }
+    ]
   },
   "permissions": [
     "declarativeNetRequest",

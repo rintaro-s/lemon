@@ -1,0 +1,14 @@
+[{
+  "id" : 1,
+  "priority": 1,
+  "action" : {
+    "type": "redirect",
+    "redirect": {
+      "extensionPath": "/images/nan-contents-direction.png"
+    }
+  },
+  "condition": {
+    "urlFilter": "https://nanext.alcnanext.jp/anetn/course/assets2/themes/images/nan-contents-direction.png",
+    "resourceTypes": ["image"]
+  } 
+}]
