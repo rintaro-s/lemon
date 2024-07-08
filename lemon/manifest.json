@@ -1,26 +1,47 @@
 { 
-  "manifest_version": 2,
-    "name": "lemon",
-    "version": "1.0",
-    "description": "非公式英語学習の MOD",
-    "background": {
-      "service_worker": "oji-killer.js"
-    },
-    "content_scripts": [
+  "manifest_version": 3,
+  "name": "lemon",
+  "version": "1.1",
+  "description": "非公式英語学習の MOD",
+  "content_scripts": [
+    {
+      "matches": ["https://*.alcnanext.jp/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/OIG3.png",
+        "images/nan-contents-direction.png"
+      ],
+      "matches": [
+        "https://*.alcnanext.jp/*"
+      ]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
       {
-        "matches": ["https://*.alcnanext.jp/*"],
-        "js": ["script.js"]
+        "id": "oji_killer",
+        "enabled": true,
+        "path": "rules/oji-killer.json"
+      },
+      {
+        "id": "dog_killer",
+        "enabled": true,
+        "path": "rules/dog-killer.json"
       }
-    ],
-    "permissions": [
-      "webRequest",
-      "webRequestBlocking",
-      "https://*.alcnanext.jp/*"
-    ],
-    "icons": {
-      "128": "OIG3.png"
-    
+    ]
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "https://*.alcnanext.jp/*"
+  ],
+  "icons": {
+    "128": "images/OIG3.png"
   }
-  
-  }
-  
+}
