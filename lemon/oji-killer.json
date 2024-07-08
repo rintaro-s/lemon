@@ -1,0 +1,14 @@
+[{
+  "id" : 1,
+  "priority": 1,
+  "action" : {
+    "type": "redirect",
+    "redirect": {
+      "extensionPath": "/OIG3.png"
+    }
+  },
+  "condition": {
+    "urlFilter": "https://nanext.alcnanext.jp/anetn/Content/images/dr1.png",
+    "resourceTypes": ["image"]
+  }
+}]

@@ -1,26 +1,29 @@
 { 
-  "manifest_version": 2,
-    "name": "lemon",
-    "version": "1.0",
-    "description": "非公式英語学習の MOD",
-    "background": {
-      "service_worker": "oji-killer.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://*.alcnanext.jp/*"],
-        "js": ["script.js"]
-      }
-    ],
-    "permissions": [
-      "webRequest",
-      "webRequestBlocking",
-      "https://*.alcnanext.jp/*"
-    ],
-    "icons": {
-      "128": "OIG3.png"
-    
+  "manifest_version": 3,
+  "name": "lemon",
+  "version": "1.1",
+  "description": "非公式英語学習のMOD",
+  "web_accessible_resources": [
+    {
+      "resources": [ "OIG3.png" ],
+      "matches": [ "https://*.alcnanext.jp/*" ]
+    }
+  ],
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "oji_killer",
+      "enabled": true,
+      "path": "oji-killer.json"
+    }]
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "https://*.alcnanext.jp/*"
+  ],
+  "icons": {
+    "128": "OIG3.png"
   }
-  
-  }
-  
+}
